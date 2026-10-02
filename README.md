@@ -8,17 +8,41 @@
 
 This repository contains a Proof of Concept (PoC) Python script designed to navigate and automate complex Microsoft B2C identity and authentication flows. It demonstrates how to programmatically handle dynamic session tokens, CSRF protection, and multi-step verification processes (including OTP) without a headless browser.
 
-> **Note to Recruiters & Reviewers:** This project was developed to showcase advanced skills in HTTP session management, API reverse engineering, concurrency, and automated testing. It highlights a deep understanding of modern web authentication mechanisms.
+
+> **Note to Recruiters & Reviewers:** This project was developed to showcase advanced skills in HTTP session management, authentication-flow analysis, concurrency, and automated testing. It highlights a deep understanding of modern web authentication mechanisms.
+## 🔄 Authentication Workflow
+
+```text
+B2C Authorization
+        │
+        ▼
+Session / CSRF State Handling
+        │
+        ▼
+Email Provisioning
+        │
+        ▼
+OTP Retrieval & Parsing
+        │
+        ▼
+Email Verification
+        │
+        ▼
+Account Authentication Flow
+        │
+        ▼
+Phone-Factor Verification
+```
 
 ## 🚀 Technical Highlights & Skills Demonstrated
 
 - **Complex Session Management:** Programmatic extraction and handling of dynamic Microsoft B2C parameters (e.g., `x-ms-cpim-csrf`, `state`, and cookies) using the `requests` library.
 
-- **Automated OTP Verification:** Integration with the (`mail.tm`) disposable email API—utilizing Bearer Authorization Tokens to programmatically provision temporary accounts, continuously poll inboxes, and extract One-Time Passwords (OTP) in real-time using targeted regex.
+- **Automated OTP Verification:** Integration with the `mail.tm` API for temporary mailbox provisioning, Bearer token authentication, inbox polling, and automated One-Time Password (OTP) extraction using regular expressions.
 
 - **Concurrency & Performance:** Implementation of Python's `threading` modules to run multiple authentication workflows simultaneously, optimizing execution time.
 
-- **Network Routing & Evasion:** Support for proxy integration (HTTP/SOCKS) via a `vpn.txt` configuration to manage rate limiting and IP-based restrictions.
+- **Proxy-Aware Networking:** Support for configurable HTTP/SOCKS proxy routing via `vpn.txt` for controlled testing environments.
 
 ## 🛠️ Prerequisites
 
@@ -27,7 +51,7 @@ This repository contains a Proof of Concept (PoC) Python script designed to navi
 - Required Python packages (install via `pip`):
 
   ```bash
-  pip install requests beautifulsoup4 names selenium phonenumbers pycountry phone-iso3166
+  pip install requests beautifulsoup4 names phonenumbers pycountry phone-iso3166
   ```
 
 ## ⚙️ Setup and Execution
