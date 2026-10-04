@@ -63,8 +63,8 @@ Phone-Factor Verification
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/dev-nayef/CFSBrands-B2C-Auto-Registrator-Bot.git
-   cd CFSBrands-B2C-Auto-Registrator-Bot
+   git clone https://github.com/dev-nayef/CFSBrands-B2C-Authentication-Flow-PoC.git
+   cd CFSBrands-B2C-Authentication-Flow-PoC
    ```
 
 2. **Configure Network Routing (Optional):**
