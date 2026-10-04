@@ -63,7 +63,7 @@ Phone-Factor Verification
    cd CFSBrands-B2C-Auto-Registrator-Bot
    ```
 
-2. **Configure Proxies (Recommended to bypass IP block security):**
+2. **Configure Proxies :**
    Add your proxies to a file named `vpn.txt` in the root directory.
    Format: `ip:port` or `username:password@ip:port` (one per line).
 
